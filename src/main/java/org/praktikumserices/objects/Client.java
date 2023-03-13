@@ -9,52 +9,33 @@ public class Client {
     String comment;
     String metroStation;
 
+    public Client(String name, String surname, String address, String phone, String metroStation) {
+        this.name = name;
+        this.surname = surname;
+        this.address = address;
+        this.phone = phone;
+        this.metroStation = metroStation;
+    }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getSurname() {
         return surname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
     public String getAddress() {
         return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
     public String getMetroStation() {
         return metroStation;
     }
 
-    public void setMetroStation(String metroStation) {
-        this.metroStation = metroStation;
-    }
+
 }
