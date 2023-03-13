@@ -2,14 +2,12 @@ package base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.praktikumserices.blocks.PlaceAnOrderPopUp;
 import org.praktikumserices.pages.WhoIsTheScooterForPage;
 import org.praktikumserices.pages.MainPage;
 import org.praktikumserices.pages.AboutOrderPage;
 import org.praktikumserices.extensions.WebdriverHolder;
 
 public abstract class AbstractWebTest {
-    protected  static PlaceAnOrderPopUp placeAnOrderPopUp;
 
     protected static WhoIsTheScooterForPage whoIsTheScooterForPage;
     protected static MainPage mainPage;
@@ -22,7 +20,6 @@ public abstract class AbstractWebTest {
         whoIsTheScooterForPage = new WhoIsTheScooterForPage(driver);
         mainPage = new MainPage(driver);
         aboutOrderPage = new AboutOrderPage(driver);
-        placeAnOrderPopUp=new PlaceAnOrderPopUp(driver);
     }
 
 

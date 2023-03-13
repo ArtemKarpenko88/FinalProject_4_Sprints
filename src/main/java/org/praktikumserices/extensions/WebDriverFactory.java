@@ -1,5 +1,6 @@
 package org.praktikumserices.extensions;
 
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.praktikumserices.config.AppConfig;
 import org.praktikumserices.config.WebDriverConfig;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,9 @@ public class WebDriverFactory {
         WebDriver driver;
         switch (browserName) {
             case "chrome":
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--remote-allow-origins=*");
+                driver = new ChromeDriver(options);
                 break;
             case "firefox":
                 driver = new FirefoxDriver();

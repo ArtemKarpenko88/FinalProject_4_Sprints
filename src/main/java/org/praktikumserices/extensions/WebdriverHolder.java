@@ -6,11 +6,11 @@ public class WebdriverHolder {
 
     private static WebDriver driver;
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         return driver;
     }
 
-    public static void setDriver(WebDriver driver){
+    public static void setDriver(WebDriver driver) {
         WebdriverHolder.driver = driver;
     }
 

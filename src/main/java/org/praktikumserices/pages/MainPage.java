@@ -1,7 +1,6 @@
 package org.praktikumserices.pages;
 
 import io.netty.util.internal.StringUtil;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
@@ -38,8 +37,18 @@ public class MainPage extends AnyComponent {
         bottom.click();
     }
 
+    public void checkAndClickOrderButton(String button) {
+        if ("Top".equals(button)) {
+            clickOrderButton();
+        } else if ("Bottom".equals(button)) {
+            clickBottomButtonOrder();
+        } else {
+            throw new IllegalArgumentException("Неправильный выбор нажатия кнопки = " + button);
+        }
 
-    public List<String> collectAnswersInQL(){
+    }
+
+    public List<String> collectAnswersInQL() {
 
         List<String> resultList = new ArrayList<>();
         List<WebElement> questionList = getRow(questionListLocator);
@@ -53,18 +62,35 @@ public class MainPage extends AnyComponent {
             String text = textElement.getText();
             System.out.println(i + ": " + text);
 
-            if (StringUtil.isNullOrEmpty(text)){
+            if (StringUtil.isNullOrEmpty(text)) {
                 throw new NotFoundException("Текст внутри вопроса не был найден");
             }
 
             resultList.add(text);
-
 
         }
         return resultList;
 
     }
 
+    /*
+   public List<String> collectAnswers(){
+       ArrayList<String> expectedString = new ArrayList<String>();
+       expectedString.add("Сутки — 400 рублей. Оплата курьеру — наличными или картой.");
+       expectedString.add("Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать" +
+               " несколько заказов — один за другим.");
+       expectedString.add("Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды " +
+               " начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30," +
+               " суточная аренда закончится 9 мая в 20:30.");
+       expectedString.add("Только начиная с завтрашнего дня. Но скоро станем расторопнее.");
+       expectedString.add("Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.");
+       expectedString.add("Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься " +
+               "без передышек и во сне. Зарядка не понадобится.");
+       expectedString.add("Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.");
+       expectedString.add("Да, обязательно. Всем самокатов! И Москве, и Московской области.");
+       return expectedString;
+   }
+*/
 
     private List<WebElement> getRow(By questionListLocator) {
         return driver.findElements(questionListLocator);

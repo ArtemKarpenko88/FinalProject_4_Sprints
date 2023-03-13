@@ -11,7 +11,8 @@ public class SuccessfulOrderCreationPopUp {
         this.driver = driver;
 
     }
-    public boolean isSuccessfulOrderCreationVisible(){
+
+    public boolean isSuccessfulOrderCreationVisible() {
         return driver.findElement(popUpWindowAppeared).isDisplayed();
     }
 
