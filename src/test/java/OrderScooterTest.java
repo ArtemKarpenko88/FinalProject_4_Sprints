@@ -48,10 +48,9 @@ public class OrderScooterTest extends AbstractWebTest {
 
     }
 
-
     @Test
     @UseDataProvider("createClientTestData")
-    public void checkErrorInCaseOfNonexistentOrder(Order order, String button ) {
+    public void checkErrorInCaseOfNonexistentOrder(Order order, String button) {
 
         // Клик на нижнюю кнопку "Заказать"
         mainPage.checkAndClickOrderButton(button);

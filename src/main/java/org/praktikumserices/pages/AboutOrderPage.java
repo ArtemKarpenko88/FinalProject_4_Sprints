@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.praktikumserices.blocks.PlaceAnOrderPopUp;
 import org.praktikumserices.blocks.SuccessfulOrderCreationPopUp;
 import org.praktikumserices.common.AnyComponent;
-import org.praktikumserices.extensions.WebdriverHolder;
+import org.praktikumserices.extensions.WebDriverHolder;
 
 import java.util.List;
 
@@ -22,8 +22,8 @@ public class AboutOrderPage extends AnyComponent {
     private final By color = By.xpath("/html/body/div/div/div[2]/div[2]/div[3]/label[1]"); //там 2 чекбокса, выбираю черный жемчуг
     private final By clickNextButton = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"); // Кнопка "Заказать"
 
-    private PlaceAnOrderPopUp placeAnOrderPopUp = new PlaceAnOrderPopUp(WebdriverHolder.getDriver());
-    private SuccessfulOrderCreationPopUp successfulOrderCreationPopUp = new SuccessfulOrderCreationPopUp(WebdriverHolder.getDriver());
+    private PlaceAnOrderPopUp placeAnOrderPopUp = new PlaceAnOrderPopUp(WebDriverHolder.getDriver());
+    private SuccessfulOrderCreationPopUp successfulOrderCreationPopUp = new SuccessfulOrderCreationPopUp(WebDriverHolder.getDriver());
 
     public PlaceAnOrderPopUp getPlaceAnOrderPopUp() {
         return placeAnOrderPopUp;

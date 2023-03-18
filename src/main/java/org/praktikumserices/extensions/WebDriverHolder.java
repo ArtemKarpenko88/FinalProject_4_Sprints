@@ -2,7 +2,7 @@ package org.praktikumserices.extensions;
 
 import org.openqa.selenium.WebDriver;
 
-public class WebdriverHolder {
+public class WebDriverHolder {
 
     private static WebDriver driver;
 
@@ -10,8 +10,8 @@ public class WebdriverHolder {
         return driver;
     }
 
-    public static void setDriver(WebDriver driver) {
-        WebdriverHolder.driver = driver;
+     public static void setDriver(WebDriver driver) {
+        WebDriverHolder.driver = driver;
     }
 
 }

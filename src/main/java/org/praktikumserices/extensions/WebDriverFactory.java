@@ -30,7 +30,7 @@ public class WebDriverFactory {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WebDriverConfig.WAIT_SECONDS_TIMEOUT));
         driver.navigate().to(AppConfig.BASE_URL);
         driver.manage().window().maximize();
-        WebdriverHolder.setDriver(driver);
+        WebDriverHolder.setDriver(driver);
         return driver;
     }
 }

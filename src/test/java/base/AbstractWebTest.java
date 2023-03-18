@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.praktikumserices.pages.WhoIsTheScooterForPage;
 import org.praktikumserices.pages.MainPage;
 import org.praktikumserices.pages.AboutOrderPage;
-import org.praktikumserices.extensions.WebdriverHolder;
+import org.praktikumserices.extensions.WebDriverHolder;
 
 public abstract class AbstractWebTest {
 
@@ -16,7 +16,7 @@ public abstract class AbstractWebTest {
     private WebDriver driver;
 
     public void createPages() {
-        driver = WebdriverHolder.getDriver();
+        driver = WebDriverHolder.getDriver();
         whoIsTheScooterForPage = new WhoIsTheScooterForPage(driver);
         mainPage = new MainPage(driver);
         aboutOrderPage = new AboutOrderPage(driver);

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Locatable;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.praktikumserices.extensions.WebdriverHolder;
+import org.praktikumserices.extensions.WebDriverHolder;
 
 import java.time.Duration;
 
@@ -16,7 +16,7 @@ public class AnyComponent {
     protected WebDriverWait wait;
 
     public AnyComponent() {
-        this.driver = WebdriverHolder.getDriver();
+        this.driver = WebDriverHolder.getDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
